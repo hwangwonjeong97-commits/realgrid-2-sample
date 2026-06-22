@@ -5,11 +5,11 @@
   "rewrites": [
     {
       "source": "/wehago-realgrid",
-      "destination": "/index.html"
+      "destination": "/wehago-realgrid.html"
     },
     {
       "source": "/wehago-realgrid/:path*",
-      "destination": "/index.html"
+      "destination": "/wehago-realgrid.html"
     }
   ]
 }
