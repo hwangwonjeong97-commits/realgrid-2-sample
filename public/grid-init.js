@@ -518,7 +518,7 @@ data.forEach(function (row) {
 
 document.addEventListener("DOMContentLoaded", function () {
     RealGrid.setLicenseKey(
-        "upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYm9cY8amGDkiMnVeQKUHJDjW2y71jtk+wteqHQ1mRMIXzEcGIrzZpzzNTakk0yR9UcKS69Wn2kI83Uszabo3mU0LUipz0P8BheMHilNXwOhKViPkoEUbYPLyVfdcZjXXt8="
+        "upVcPE+wPOmtLjqyBIh9RkM/nBOseBrflwxYpzGZyYlmYgRykpCTKFxp5via8RxoOeo1oRwTPhXZk8PjE0BhuzU2pJNMkfVHJhJiNdi2V1hrRY16H+c8hW3+zSEY9q2VTTY1DSzfyu9SiVQ6/lCl2f1gvEKFbAmS"
     );
 
     const provider = new RealGrid.LocalDataProvider();
