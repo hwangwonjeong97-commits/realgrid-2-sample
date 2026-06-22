@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+:root {
+  --primary-50: #eff4ff;
+  --primary-100: #dbe7ff;
+  --primary-200: #bcd4ff;
+  --primary-base: #105aff;
+  --primary-300: #719bfc;
+  --primary-700: #0943c6;
+  --selection-bg: rgba(16, 90, 255, 0.05);
+  --selection-header-bg: #f3f7ff;
+  --secondary-0: #ffffff;
+  --secondary-30: #fcfcfc;
+  --secondary-50: #f4f4f4;
+  --secondary-60: #ededed;
+  --secondary-100: #e1e1e1;
+  --secondary-200: #d3d3d3;
+  --secondary-300: #c6c6c6;
+  --secondary-400: #b4b4b4;
+  --secondary-600: #777777;
+  --secondary-700: #4a4a4a;
+  --secondary-800: #333333;
+  --negative-100: #ffe8ea;
+  --negative-danger: #fa4553;
+  --pending-100: #fff2dc;
+  --pending-warning: #ffa000;
+  --pending-800: #eb6400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: var(--secondary-0);
+  color: var(--secondary-800);
+  font-family: "Noto Sans CJK KR";
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.toolbar {
+  height: 0;
+}
+
+#realgridContainer {
+  width: 100%;
+  height: 720px;
+  border: 1px solid var(--secondary-100);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--secondary-0);
+}
+
+#realgridContainer,
+#realgridContainer * {
+  font-family: "Noto Sans CJK KR" !important;
+  letter-spacing: -0.5px;
+}
+
+/* RealGrid shell */
+#realgridContainer .rg-root,
+#realgridContainer .rg-grid {
+  border: 0 !important;
+  background: var(--secondary-0) !important;
+}
+
+#realgridContainer .rg-rowbarcontainer {
+  position: relative !important;
+  z-index: 20 !important;
+  background: #f7f8fa !important;
+}
+
+#realgridContainer .rg-rowbarcontainer .rg-table,
+#realgridContainer .rg-rowbarcontainer .rg-table tr,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td {
+  position: relative !important;
+  z-index: 21 !important;
+}
+
+#realgridContainer .rg-table,
+#realgridContainer .rg-data,
+#realgridContainer .rg-head,
+#realgridContainer .rg-foot {
+  color: var(--secondary-800);
+}
+
+/* Header */
+#realgridContainer .rg-header,
+#realgridContainer .rg-header-group,
+#realgridContainer .rg-header-cell,
+#realgridContainer .rg-header-renderer,
+#realgridContainer .rg-head .rg-table tr,
+#realgridContainer .rg-head .rg-table td {
+  background: #f7f8fa !important;
+  color: var(--secondary-600) !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+#realgridContainer .rg-header-cell,
+#realgridContainer .rg-head .rg-table td {
+  height: 28px !important;
+  border-color: var(--secondary-100) !important;
+}
+
+#realgridContainer .rg-header-renderer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 8px !important;
+  line-height: 18px !important;
+}
+
+/* Cells */
+#realgridContainer .rg-data-cell,
+#realgridContainer .rg-rowbar-cell,
+#realgridContainer .rg-renderer,
+#realgridContainer .rg-data .rg-table td,
+#realgridContainer .rg-body .rg-table tr td,
+#realgridContainer .rg-fixed-body .rg-table tr td {
+  color: var(--secondary-800) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 21px !important;
+  border-color: var(--secondary-100) !important;
+}
+
+#realgridContainer .rg-data-cell,
+#realgridContainer .rg-data .rg-table td,
+#realgridContainer .rg-body .rg-table tr td,
+#realgridContainer .rg-fixed-body .rg-table tr td {
+  background: var(--secondary-0) !important;
+}
+
+#realgridContainer .rg-renderer {
+  padding: 0 8px !important;
+}
+
+/* Hover and selected states */
+#realgridContainer .rg-data-row:hover .rg-data-cell,
+#realgridContainer .rg-data-row-hover .rg-data-cell,
+#realgridContainer .rg-hover .rg-data-cell,
+#realgridContainer .rg-body .rg-table tr td:hover,
+#realgridContainer .rg-fixed-body .rg-table tr td:hover,
+#realgridContainer .rg-rowhover {
+  background: rgba(0, 0, 0, 0.03) !important;
+}
+
+#realgridContainer .rg-selection,
+#realgridContainer .rg-rowfocus,
+#realgridContainer .rg-rowblock {
+  background: var(--selection-bg) !important;
+}
+
+#realgridContainer .rg-focused-row .rg-data-cell,
+#realgridContainer .rg-data-row-selected .rg-data-cell,
+#realgridContainer .rg-selected,
+#realgridContainer .rg-selection-cell {
+  background: var(--selection-bg) !important;
+}
+
+#realgridContainer .rg-focused-cell,
+#realgridContainer .rg-focus,
+#realgridContainer .rg-current-cell {
+  background: transparent !important;
+  border-color: var(--primary-base) !important;
+  box-shadow: inset 0 0 0 1px var(--primary-base) !important;
+}
+
+#realgridContainer .rg-selection {
+  border: 1px solid var(--primary-base) !important;
+}
+
+#realgridContainer .rg-selection-cell {
+  color: var(--primary-base) !important;
+}
+
+#realgridContainer .rg-editor-container,
+#realgridContainer .rg-editor,
+#realgridContainer .rg-focus-editing {
+  border-color: var(--primary-base) !important;
+  box-shadow: 0 0 0 1px var(--primary-base) !important;
+  font-family: "Noto Sans CJK KR" !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 21px !important;
+  letter-spacing: -0.5px !important;
+}
+
+#realgridContainer .rg-editor-container input,
+#realgridContainer .rg-editor-container textarea,
+#realgridContainer .rg-editor-container > input,
+#realgridContainer .rg-editor-container > textarea {
+  color: var(--secondary-800) !important;
+  font-family: "Noto Sans CJK KR" !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 21px !important;
+  letter-spacing: -0.5px !important;
+  caret-color: var(--primary-base) !important;
+}
+
+#realgridContainer .rg-rowbarcontainer .rg-table tr td {
+  background-color: #f7f8fa !important;
+  border-color: var(--secondary-100) !important;
+  color: var(--secondary-600) !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+}
+
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-rowindicator-cell:hover,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-checkbar-cell:hover,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-statebar-cell:hover {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-rowindicator-focus,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-rowindicator-select,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-statebar-focus,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-statebar-select,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-checkbar-focus,
+#realgridContainer .rg-rowbarcontainer .rg-table tr td.rg-checkbar-select {
+  background-color: var(--selection-header-bg) !important;
+  color: var(--primary-base) !important;
+}
+
+#realgridContainer .rg-header-focus,
+#realgridContainer .rg-header-select,
+#realgridContainer .selected-column-header,
+#realgridContainer .rg-header-cell.rg-header-focus,
+#realgridContainer .rg-header-cell.rg-header-select,
+#realgridContainer .rg-header-cell.selected-column-header,
+#realgridContainer .rg-head .rg-table td.rg-header-focus,
+#realgridContainer .rg-head .rg-table td.rg-header-select,
+#realgridContainer .rg-head .rg-table td.selected-column-header,
+#realgridContainer .rg-header-focus .rg-header-renderer,
+#realgridContainer .rg-header-select .rg-header-renderer,
+#realgridContainer .selected-column-header .rg-header-renderer {
+  background: var(--selection-header-bg) !important;
+  color: var(--primary-base) !important;
+}
+
+/* Checkbox */
+#realgridContainer .rg-check-renderer {
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 4px !important;
+  background-size: 14px 14px !important;
+}
+
+#realgridContainer .rg-check-renderer-unchecked {
+  border: 1px solid var(--secondary-200) !important;
+  background: var(--secondary-0) !important;
+}
+
+#realgridContainer .rg-check-renderer-checked,
+#realgridContainer .rg-check-renderer-intermediate {
+  border: 0 !important;
+  background-color: var(--primary-300) !important;
+}
+
+/* Footer and scroll area */
+#realgridContainer .rg-footer,
+#realgridContainer .rg-footer-cell,
+#realgridContainer .rg-footer-renderer,
+#realgridContainer .rg-foot .rg-table td,
+#realgridContainer .rg-foot .rg-renderer {
+  background: #f7f8fa !important;
+  color: var(--secondary-800) !important;
+  border-color: var(--secondary-200) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 21px !important;
+}
+
+#realgridContainer .subtotal-footer-label,
+#realgridContainer .subtotal-footer-value,
+#realgridContainer .total-footer-label,
+#realgridContainer .total-footer-value {
+  background: #f7f8fa !important;
+  color: var(--secondary-800) !important;
+  font-weight: 700 !important;
+}
+
+#realgridContainer .total-footer-label .rg-footer-renderer,
+#realgridContainer .total-footer-value .rg-footer-renderer {
+  background: #f7f8fa !important;
+}
+
+#realgridContainer .subtotal-footer-label .rg-footer-renderer,
+#realgridContainer .subtotal-footer-value .rg-footer-renderer {
+  background: #f7f8fa !important;
+}
+
+#realgridContainer .subtotal-footer-label,
+#realgridContainer .total-footer-label {
+  text-align: center !important;
+}
+
+#realgridContainer .rg-scrollbar,
+#realgridContainer .rg-scroll-track {
+  background: var(--secondary-50) !important;
+}
+
+#realgridContainer .rg-scroll-thumb {
+  background: var(--secondary-300) !important;
+  border-radius: 4px !important;
+}
+
+/* Alignment helpers */
+.right-column {
+  text-align: right;
+}
+
+.center-column {
+  text-align: center;
+}
+
+.left-column {
+  text-align: left;
+}
+
+/* DS Badge: h-5 px-1 rounded text-11 medium */
+.ds-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 20px;
+  min-width: 20px;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.ds-badge-error {
+  background: var(--negative-100);
+  color: var(--negative-danger);
+}
+
+.ds-badge-info {
+  background: var(--primary-50);
+  color: var(--primary-base);
+}
+
+.ds-badge-new {
+  background: var(--pending-100);
+  color: var(--pending-800);
+}
+
+.day-cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 24px;
+  color: var(--secondary-800);
+  overflow: visible;
+}
+
+.day-column {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.day-column .rg-renderer {
+  padding: 0 !important;
+  overflow: visible !important;
+  position: static !important;
+}
+
+.day-badge-anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 0;
+  height: 24px;
+  overflow: visible;
+}
+
+.day-value {
+  position: relative;
+  z-index: 1;
+}
+
+.ds-corner-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 16px;
+  height: 16px;
+  background: var(--pending-warning);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ds-corner-badge span {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  color: var(--secondary-0);
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.menu-action-cell .rg-renderer {
+  padding: 0 !important;
+}
+
+.menu-move-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 0;
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid var(--secondary-400);
+  border-radius: 4px;
+  background: var(--secondary-0);
+  color: var(--secondary-800);
+  font-family: "Noto Sans CJK KR";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.menu-move-button:hover {
+  border-color: var(--secondary-700);
+  color: var(--secondary-800);
+  background: var(--secondary-0);
+}
+
+.menu-move-button:focus {
+  outline: none;
+  border-color: var(--secondary-700);
+  box-shadow: none;
+}
