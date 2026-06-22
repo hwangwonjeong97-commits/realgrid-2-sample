@@ -5,7 +5,7 @@ RealGrid 2 sample customized with WEHAGO-style grid typography, badges, selectio
 ## Run
 
 ```bash
-PORT=5175 node server.js
+PORT=5175 node local-server.js
 ```
 
 Then open:
