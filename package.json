@@ -1,9 +1,5 @@
 {
   "name": "realgrid-2-sample",
   "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "node -e \"console.log('Static build: public directory ready')\"",
-    "start": "node local-server.js"
-  }
+  "private": true
 }
