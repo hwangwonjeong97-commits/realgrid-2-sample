@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/wehago-realgrid",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/wehago-realgrid/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
